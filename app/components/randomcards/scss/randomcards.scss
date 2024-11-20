@@ -1,0 +1,148 @@
+@import './app/scss/breakpoints';
+
+.randomcards{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:20px;
+
+    .randomcards_item{
+        display:flex;
+        padding:20px;
+        border-radius:10px;
+        min-height:200px;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        gap:10px;
+
+        &:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 4;
+            @media(max-width:$breakpoint1280){
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 1;
+                grid-column-end: 7;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        &:nth-child(2){
+            grid-column-start: 4;
+            grid-column-end: 9;
+            @media(max-width:$breakpoint1280){
+                grid-column-start: 5;
+                grid-column-end: 9;
+            }
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 7;
+                grid-column-end: 13;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        &:nth-child(3){
+            grid-column-start: 9;
+            grid-column-end: 13;
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 1;
+                grid-column-end: 7;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        &:nth-child(4){
+            grid-column-start: 1;
+            grid-column-end: 6;
+            @media(max-width:$breakpoint1280){
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 7;
+                grid-column-end: 13;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        &:nth-child(5){
+            grid-column-start: 6;
+            grid-column-end: 10;
+            @media(max-width:$breakpoint1280){
+                grid-column-start: 5;
+                grid-column-end: 9;
+            }
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 1;
+                grid-column-end: 7;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        &:nth-child(6){
+            grid-column-start: 10;
+            grid-column-end: 13;
+            @media(max-width:$breakpoint1280){
+                grid-column-start: 9;
+                grid-column-end: 13;
+            }
+            @media(max-width:$breakpoint1024){
+                grid-column-start: 7;
+                grid-column-end: 13;  
+            }
+            @media(max-width:$breakpoint768){
+                grid-column-start: 1;
+                grid-column-end: 13;  
+            }
+        }
+
+        @media(max-width:$breakpoint400){
+            padding:15px;
+        }
+
+        .randomcards_item_icon{
+            width:50px;
+            height:50px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            margin-bottom:10px;
+            border-radius:5px;
+            .randomcards_item_icon_svg{
+                height:30px;
+                width:30px;
+            }
+        }
+
+        .randomcards_item_title{
+            font-size:20px;
+            line-height:1.2;
+            margin:0px;
+        }
+
+        .randomcards_item_text{
+            font-size:16px;
+            line-height:1.2;
+            font-weight:300;
+        }
+
+    }
+}

@@ -1,0 +1,121 @@
+@import './app/scss/breakpoints';
+
+.form{
+    display:flex;
+    flex-direction: column;
+    background: none;
+    label{
+        &:not(:first-child){
+            margin-top:15px;
+        }
+        margin-bottom:10px;
+     }
+    input[type=text],textarea{
+        font-size:14px;
+        width:100%;
+        padding:20px 15px;
+        border-radius:5px;
+        background:#f0f0f0;
+        outline: none;
+        border:1px solid transparent;
+        color:#191919;
+        font-weight:500;
+        transition: all 0.4s;
+        font-family: CeraRoundPro,Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+        resize: none;
+        &::placeholder{
+            color:#aaaaaa;
+            font-weight:400;
+        }
+        &:focus{
+            border:1px solid #55AEA8;
+        }
+        &.error{
+            border:1px solid red;
+        }
+    }
+    textarea{
+        height:103px;
+    }
+    .textarea_symbols{
+        margin-top:5px;
+        font-size:12px;
+        opacity:0.7;
+    }
+    label{
+        font-size:14px;
+    }
+    .submit{
+        outline: none;
+        border: none;
+        cursor: pointer;
+        padding:20px 15px;
+        width:100%;
+        max-width:100%;
+        background: transparent;
+        font-family: CeraRoundPro,Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+        position: relative;
+        border-radius:5px;
+        display:flex;
+        gap:10px;
+        justify-content: center;
+        align-items:center;
+        overflow: hidden;
+        background:#55AEA8;
+        color:#fff;
+        transition: all 0.3s;
+        margin-top:20px;
+        @media(max-width:$breakpoint768){
+            padding:20px 10px;
+        }
+        .button_text{
+            position: relative;
+            z-index:15;
+            font-size:18px;
+            font-weight:400;
+            text-transform: uppercase;
+            transition: all 0.4s;
+            color:#fff;
+        }
+        .submit_icon{
+            width:24px;
+            height:24px;
+        }
+        &:disabled{
+            cursor: auto;
+            opacity:0.6;
+        }
+        &:hover{
+            color:#fff;
+            background:#409690;
+        }
+    }
+
+    .input-text-error{
+        padding:10px;
+        margin-top:10px;
+        border-radius:5px;
+        background:#ffada2;
+        color:rgb(192, 25, 25);
+        font-weight:500;
+        font-size:14px;
+        display:none;
+        &.error{
+            display:block;
+        }
+    }
+
+    .input-text-send{
+        padding:10px;
+        margin-top:10px;
+        border-radius:5px;
+        background:#aaffa2;
+        color:rgb(44, 192, 25);
+        font-weight:500;
+        font-size:14px;
+        display:none;
+        &.send{
+            display:block;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import './app/scss/breakpoints';
+@import './node_modules/swiper/swiper.scss';
+@import './node_modules/swiper/modules/scrollbar.scss';
+
+.slider_wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    position: relative;
+    .item_slider{
+        width:100%;
+        overflow: hidden;
+        margin-left:auto;
+        border-radius: 10px;
+        height:500px;
+        @media(max-width:$breakpoint1280){
+            max-width:100%;
+        } 
+        @media(max-width:$breakpoint1024){
+            width:100%;
+        }
+        .swiper-slide{
+            width:100%;
+            height:auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    .slider_imgs{
+        width:100%;
+        margin-left:auto;
+        display:flex;
+        gap:20px;
+        overflow: hidden;
+        padding-bottom:10px;
+        user-select: none;
+         @media(max-width:$breakpoint1280){
+            max-width:100%;
+         }   
+         @media(max-width:$breakpoint1024){
+            width:100%;
+            margin-left:0px;
+        }
+        .swiper-wrapper{
+            padding-bottom:7px;
+            .swiper-slide{
+                &:not(:last-child){
+                    margin-right:20px;
+                }
+                width: 120px;
+                max-width: 120px;
+                height: 120px;
+                max-height: 120px;
+                overflow: hidden;
+                border-radius: 10px;
+                flex-shrink: 0;
+                background-color: linear-gradient(180deg, rgba(2, 124, 246, 0.25) 0%, rgba(0, 110, 215, 0.25) 100%);
+                transition: all 0.3s;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                &.active{
+                    border: 3px solid #55AEA8;
+                    img{
+                        opacity:1;
+                    }
+                }
+                img{
+                    object-fit: cover;
+                    width:100%;
+                    height:100%;
+                    opacity:0.6;
+                    transition:all 0.3s;
+                }
+                &:not(.active){
+                    &:hover{
+                        cursor: pointer;
+                        img{
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-scrollbar{
+            .swiper-scrollbar-drag{
+                background:#55AEA8;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<form class="form" action="" method="post">
+    <label class="text_color" for="name">Ваше ім'я</label>
+    <input id="name" class="required" type="text" name="name" placeholder="Введіть ім'я"/>
+    <label class="text_color" for="lastname">Ваше прізвище</label>
+    <input id="lastname" class="required" type="text" name="lastname" placeholder="Введіть ваше прізвище"/>
+    <label class="text_color" for="phone">Номер телефону</label>
+    <input id="phone" class="required phone" type="text" name="phone" placeholder="38 (000) 000-00-00" data-mask="38 (000) 000-00-00" inputmode="numeric"/>
+    <label class="text_color" for="mail">Ваш email</label>
+    <input id="mail" class="required mail" type="text" name="mail" placeholder="Введіть ваш email"/>
+    <label class="text_color" for="organization">Назва організації</label>
+    <input id="organization" class="required" type="text" name="organization" placeholder="Вкажіть назву організації"/>
+    <label class="text_color" for="txt">Текст звернення</label>
+    <textarea id="txt" class="required" name="txt" maxlength="500" placeholder="Введіть текст звернення"/></textarea>
+    <div class="textarea_symbols text_color"><span class="textarea_symbols_actual">0</span>/500</div>
+    <span class="input-text-error input-error">Усі поля обов'язкові до заповнення!</span>
+    <span class="input-text-error input-error-phone">Номер введено невірно!<br>Правильний формат номеру: 38 (000) 000-00-00</span>
+    <span class="input-text-error input-error-mail">Введіть правильну адресу електронної пошти</span>
+    <span class="input-text-send input-send">Дякуємо. Ваш запит відправлено.</span>
+    <button class="submit" type="submit">
+        <svg class="submit_icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.54364 6.67292C3.27281 4.33892 5.77593 2.62492 7.98739 3.63092L20.4291 9.28892C22.8124 10.3719 22.8124 13.6279 20.4291 14.7109L7.98739 20.3699C5.77593 21.3759 3.27385 19.6619 3.54364 17.3279L4.04364 12.9999H12.4999C12.7762 12.9999 13.0411 12.8946 13.2365 12.707C13.4318 12.5195 13.5416 12.2651 13.5416 11.9999C13.5416 11.7347 13.4318 11.4803 13.2365 11.2928C13.0411 11.1053 12.7762 10.9999 12.4999 10.9999H4.04468L3.54364 6.67292Z" fill="white"/>
+        </svg>            
+        <span class="button_text submit_text">Відправити запит</span>
+    </button>
+</form>

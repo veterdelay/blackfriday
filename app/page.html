@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html translate=no lang=uk dir=ltr>
+  <head>
+    <title>Gelius product landing page</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+    <style>
+      .app-container:not(.product-all__section) .content--preset-xl{
+        padding:0px !important;
+      }
+      .content--rounded{
+        overflow:hidden;
+      }
+    </style>
+    <link rel=stylesheet href="./geliusAssets/index.d29c3b25.css">
+    <link rel="stylesheet" href="./geliusAssets/TheLayout.b7ea5792.css">
+    <link rel="stylesheet" href="./geliusAssets/ui.b8be4ef7.css">
+    <link rel="stylesheet" href="./geliusAssets/ProductPage.d3ec29e9.css">
+  </head>
+  <body class="desktop no-touch body--light" data-server-rendered>
+    <div id=q-app>
+      <div class="wrapper full-width">
+        <div class="layout" data-v-adb84e92>
+          <header class="header header--outline layout__header" data-v-adb84e92 data-v-71a80616>
+            <div class="header__inner" data-v-71a80616>
+              <div class="app-container header__container" data-v-71a80616 data-v-67d39460>
+                <!--[-->
+                <div class="header__left" data-v-71a80616>
+                  <a href="/" class="router-link-active app-logo header__logo" title="1.3.4" data-v-71a80616 data-v-73a14d24>
+                    <svg viewBox="0 0 107 35" width="200" class="app-logo__element" data-v-73a14d24>
+                      <use xlink:href="./geliusAssets/img/logos/sprite.svg#logo" data-v-73a14d24></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="header__right" data-v-71a80616>
+                  <div class="q-toggle cursor-pointer no-outline row inline no-wrap items-center header__theme-toggle" tabindex="0" role="switch" aria-checked="false" data-v-71a80616>
+                    <div class="q-toggle__inner relative-position non-selectable q-toggle__inner--falsy" aria-hidden="true">
+                      <input class="hidden q-toggle__native absolute q-ma-none q-pa-none" type="checkbox">
+                      <div class="q-toggle__track"></div>
+                      <div class="q-toggle__thumb absolute flex flex-center no-wrap"></div>
+                    </div>
+                    <span class="no-outline" tabindex="-1"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main class="layout__content" data-v-adb84e92>
+            <div class="content content--transparent product" data-v-adb84e92 data-v-5b29138e data-v-7c9f6095>
+              <section class="content content--transparent section product-section product__section" data-v-5b29138e style="--2dfd0027:0px;" data-v-2634900a data-v-bee88eda data-v-7c9f6095>
+                <div class="product-section__tab-panels" data-v-2634900a>
+                  <div class="product-all product-section__tab" id="all" data-v-2634900a data-v-9ab43e3c>
+                    <section class="content content--transparent section" data-v-9ab43e3c data-v-bee88eda data-v-7c9f6095>
+                      <div class="app-container" data-v-9ab43e3c data-v-67d39460>
+                        <div class="content content--rounded content--preset-xl" data-v-9ab43e3c data-v-7c9f6095 style="margin-top:50px;">
+                          <div data-v-9ab43e3c>
+                          <!-- -------------------------------------------------------------------------------------- -->
+
+                            <iframe id="landingIframe" style="display: block;border: none;width:100%;" src="./index.html"></iframe>
+
+                          <!-- -------------------------------------------------------------------------------------- -->
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+          <footer class="footer theme-dark layout__footer" data-v-adb84e92 data-v-d51662cc>
+            <div class="app-container footer__container" data-v-d51662cc data-v-67d39460>
+              <div class="footer__top" data-v-d51662cc>
+                <a href="/" class="router-link-active app-logo footer__logo" title="1.3.4" data-v-d51662cc data-v-73a14d24>
+                  <svg viewBox="0 0 107 35" width="200" class="app-logo__element" data-v-73a14d24>
+                    <use xlink:href="./geliusAssets/img/logos/sprite.svg#logo" data-v-73a14d24></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      function setScrollInfo(){
+        const { scrollY, scrollX, innerWidth, innerHeight } = window
+        const iframeRect = landingIframe.getBoundingClientRect()
+        landingIframe.contentWindow.postMessage({
+        type: 'scroll',
+        detail: { scrollY, scrollX, innerWidth, innerHeight, iframeRect }
+        }, '*');
+      }
+
+      landingIframe.onload = function(){
+        setScrollInfo()
+      }
+      window.addEventListener("resize", setScrollInfo);
+      window.addEventListener("scroll", setScrollInfo);
+    </script>
+    <script>
+      function getParametrs(){
+        let parametrs;
+        if(document.body.classList.contains('body--light')){
+          parametrs = '?is_dark=false&in_stock=true&price=2199';
+        }else{
+          parametrs = '?is_dark=true&in_stock=true&price=2199';
+        }
+        landingIframe.src = './index.html' + parametrs;
+      }
+
+      window.addEventListener("load", getParametrs());
+    </script>
+    <script>
+      let button = document.querySelector('.header__theme-toggle');
+      let body = document.body;
+      let footer = document.footer;
+
+      button.addEventListener('click', function () {
+        if(body.classList.contains('body--light')){
+          body.classList.add('body--dark')
+          body.classList.remove('body--light')
+        }else{
+          body.classList.add('body--light')
+          body.classList.remove('body--dark')
+        }
+        getParametrs()
+      });
+    </script>
+    <script>
+      window.addEventListener("message", receiveMessage, false);
+
+      function receiveMessage(event) {
+        if(event.data.type === 'resize'){
+          landingIframe.style.height = event.data.detail.height + 'px'
+          landingIframe.style.width = '100%'
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@import './app/scss/breakpoints';
+@import './node_modules/swiper/swiper.scss';
+
+.partners{
+
+   .swiper-slide{
+        display:flex;
+        justify-content: center;
+        user-select: none;
+        img{
+            transition: all 0.3s;
+            opacity:0.6;
+            filter: grayscale(100%);
+            border-radius:10px;
+        }
+        &:hover{
+            img{
+                opacity:1;
+                filter: grayscale(0%);
+            }
+        }
+   } 
+
+}

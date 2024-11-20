@@ -1,0 +1,90 @@
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Thin.52839c30.woff2) format("woff2");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Light.5cef1c4b.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Regular.a04d329a.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Medium.4cf4f07c.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Bold.1b85b776.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:CeraRoundPro;src:url(./../resources/CeraRoundPro-Black.6227d81b.woff2) format("woff2");font-weight:800;font-style:normal;font-display:swap}
+
+:root {
+    --lnd-pd-px: 40px;
+    --lnd-pd-px-mins: -40px;
+    --lnd-pd-py: 40px;
+    --lnd-mrgn: 50px;
+    @media(max-width:$breakpoint1280){
+        --lnd-pd-px: 24px;
+        --lnd-pd-px-mins: -24px;
+        --lnd-pd-py: 24px;
+        --lnd-mrgn: 40px;
+    }
+    @media(max-width:$breakpoint768){
+        --lnd-pd-px: 16px;
+        --lnd-pd-px-mins: -16px;
+        --lnd-pd-py: 16px;
+    }
+}
+
+//container
+.section_container{
+    padding: 0px var(--lnd-pd-px);
+}
+
+.standart_margin{
+    margin:var(--lnd-mrgn) 0px;
+}
+
+.standart_margin_bottom{
+    margin-bottom:var(--lnd-mrgn);
+}
+
+.standart_margin_top{
+    margin-top:var(--lnd-mrgn);
+}
+
+//global
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html{
+    overflow: hidden;
+}
+
+body{
+    margin:0px;
+    -webkit-font-smoothing: auto;
+    font-family: CeraRoundPro,Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+img{
+    max-width:100%;
+}
+
+//styles
+
+.landing_sections{
+    width:100%;
+    padding: var(--lnd-pd-px) 0px;
+    &.landing--body--dark{
+
+        .text_color{
+            color:#fff;
+        }
+
+        .white_text_color{
+            color:#fff;
+        }
+
+    }
+    &.landing--body--light{
+
+        .text_color{
+            color:#303030;
+        }
+
+        .white_text_color{
+            color:#fff;
+        }
+
+    }
+}

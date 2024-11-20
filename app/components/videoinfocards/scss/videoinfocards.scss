@@ -1,0 +1,233 @@
+@import './app/scss/breakpoints';
+
+.videoinfocards{
+    display:grid;
+    grid-template-columns: calc(41.67% - 20px) calc(33.33% - 20px) 25%;
+    gap:20px;
+    @media(max-width:$breakpoint1280){
+        grid-template-columns: calc(33.33% - 20px) calc(33.33% - 20px) 33.33%;
+    }
+    @media(max-width:$breakpoint1024){
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media(max-width:$breakpoint768){
+        grid-template-columns: repeat(1, 100%);
+    }
+    .videoinfocards_item{
+        display:flex;
+        padding:20px;
+        border-radius:10px;
+        min-height:200px;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        flex-direction: column;
+        gap:20px;
+        @media(max-width:$breakpoint400){
+            padding:15px;
+        }
+
+        @media(max-width:$breakpoint1024) and (min-width:($breakpoint768 + 10px)){
+            &:nth-child(2){
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+    
+            &:nth-child(3){
+                grid-column-start: 4;
+                grid-column-end: 6;
+            }
+        }
+
+        &.videobg{
+            text-decoration: none;
+            @media(max-width:$breakpoint1024) and (min-width:($breakpoint768 + 10px)){
+                grid-column-start: 1;
+                grid-column-end: 6;
+            }
+
+            .videoinfocards_button{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width:60px;
+                height:60px;
+                background: #40969062;
+                margin-left:auto;
+                border-radius:100%;
+                z-index:15;
+                transition: all 0.4s;
+                .videoinfocards_button_icon{
+                    width:25px;
+                    height:auto;
+                    transition: all 0.4s;
+                }
+            }
+
+            &:hover{
+                .videoinfocards_button{
+                    .videoinfocards_button_icon{
+                        width:28px;
+                    }
+                }
+            }
+
+            .videoinfocards_text{
+                @media(max-width:$breakpoint1280){
+                    max-width:200px;
+                }
+                @media(max-width:$breakpoint1024){
+                    max-width:300px;
+                }
+                @media(max-width:$breakpoint768){
+                    max-width:230px;
+                }
+            }
+
+            .videoinfocards_cover{
+                position:absolute;
+                top:0;
+                left:0;
+                z-index:3;
+                width: 100%;
+                height: 100%;
+                opacity:0.4;
+                background: linear-gradient(180deg, #409690 0%, #202020a4 100%);
+                transition: 0.6s all;
+            }
+    
+            video{
+                position: absolute;
+                left:0;
+                top:0;
+                min-width: 100%;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                object-fit: cover !important;
+                transition: 0.6s all;
+            }
+    
+            .videoinfocards_desktop_video{
+                display:block;
+                @media (max-width:calc($breakpoint1024 + 1px)) {
+                   display:none; 
+                }
+            }
+    
+            .videoinfocards_mobile_tablet_video{
+                display:block;
+                @media (min-width:calc($breakpoint1024 + 1px)) {
+                   display:none; 
+                }
+            }
+    
+            iframe{
+                display:none;
+                position: absolute;
+                top: 0;
+                z-index: 5;
+                width: 100%;
+            }
+
+        }
+
+        &.darkbg{
+            .darkbg_items{
+                display:flex;
+                .darkbg_item{
+                    width:60px;
+                    height:60px;
+                    position: relative;
+                    margin-right:-20px;
+                }
+            }
+            .videoinfocards_text{
+                @media(max-width:$breakpoint1280){
+                    max-width:200px;
+                }
+                @media(max-width:$breakpoint1024){
+                    max-width:200px;
+                }
+                @media(max-width:$breakpoint768){
+                    max-width:230px;
+                }
+            }
+        }
+
+        &.watches{
+
+            .videoinfocards_button_download{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width:60px;
+                height:60px;
+                margin-right:auto;
+                border-radius:100%;
+                z-index:15;
+                transition: all 0.4s;
+                .videoinfocards_button_download_icon{
+                    width:25px;
+                    height:auto;
+                    transition: all 0.4s;
+                }
+                &:hover{
+                        .videoinfocards_button_download_icon{
+                            width:28px;
+                        }
+                }
+            }
+
+            .videoinfocards_text{
+                @media(max-width:$breakpoint1280){
+                    max-width:200px;
+                }
+                @media(max-width:$breakpoint1024){
+                    max-width:230px;
+                }
+            }
+            .watches_img{
+                position: absolute;
+                right:0;
+                bottom:0;
+                @media(max-width:$breakpoint1280){
+                    right:-50px;
+                }
+                @media(max-width:$breakpoint400){
+                    display:none;
+                }
+            }
+        }
+
+        .videoinfocards_text{
+            position: relative;
+            z-index:15;
+            display:flex;
+            flex-direction: column;
+            height: fit-content;
+            max-width:230px;
+            margin-top:auto;
+            position: relative;
+            gap:10px;
+            &.white_text_color{
+                color:#fff;
+            }
+            .videoinfocards_title{
+                margin:0px;
+                font-size:20px;
+                line-height:1.2;
+            }
+
+            .videoinfocards_subtitle{
+                font-size:14px;
+                font-weight:300;
+                line-height: 1.2;
+            }
+
+        }
+
+    }
+
+}

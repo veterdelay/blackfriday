@@ -1,0 +1,54 @@
+<div class="textimage standart_margin_bottom">
+    <div class="section_container">
+        <div class="textimage_body @@if (settings.reverse) {reverse}">
+            <div class="text">
+                @@if (title) {
+                    <h2 class="textimage_title text_color">@@title</h2>
+                }
+                <div class="textimage_text_items">
+                    @@if (text1) {
+                        <span class="text_span text_color">@@text1</span>
+                    }
+                    @@if (text2) {
+                        <span class="text_span text_color">@@text2</span>
+                    }
+                    @@if (videoLink) {
+                        <a target="_blank" class="watch_video watch_video_background" href="@@videoLink">
+                            <div class="play_round">
+                                <img class="play_round_img" src="@@videoImage">
+                                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                <svg class="play_round_icon" width="800px" height="800px" viewBox="-1 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-65.000000, -3803.000000)" fill="#5aa09a">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M18.074,3650.7335 L12.308,3654.6315 C10.903,3655.5815 9,3654.5835 9,3652.8985 L9,3645.1015 C9,3643.4155 10.903,3642.4185 12.308,3643.3685 L18.074,3647.2665 C19.306,3648.0995 19.306,3649.9005 18.074,3650.7335" id="play-[#1000]">
+                                
+                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="play_text">
+                                <span class="play_text_title text_color">Дивіться на YouTube Shorts</span>
+                                <span class="play_text_subtitle text_color">@@videoTitle</span>
+                            </div>
+                        </a>
+                    }
+                    @@if (buttonText) {
+                        <button class="buy main_buy_button">
+                            <div class="button_linear_hover"></div>
+                            <div class="button_linear"></div>
+                            <span class="button_text">@@buttonText</span>
+                           </button>
+                    }
+                    <!-- text infografic -->
+                    <!-- icons -->
+                </div>
+            </div>
+            <div class="image">
+                <img class="textimage_image" src="@@image">
+            </div>
+        </div>
+    </div>
+</div>
