@@ -54,6 +54,7 @@ body{
     margin:0px;
     -webkit-font-smoothing: auto;
     font-family: CeraRoundPro,Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color:#010302;
 }
 
 img{
@@ -64,7 +65,7 @@ img{
 
 .landing_sections{
     width:100%;
-    padding: var(--lnd-pd-px) 0px;
+    padding: 0px 0px var(--lnd-pd-px) 0px;
     &.landing--body--dark{
 
         .text_color{
