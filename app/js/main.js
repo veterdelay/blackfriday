@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (nameElement) nameElement.textContent = data.name;
         if (imageElement) imageElement.src = `https://media.gelius.ua${data.base_image}`;
-        if (nameElement) nameElement.href = `/p/${data.slug}`;
-        if (imageLinkElement) imageLinkElement.href = `/p/${data.slug}`;
+        if (nameElement) nameElement.href = `https://gelius.ua/p/${data.slug}`;
+        if (imageLinkElement) imageLinkElement.href = `https://gelius.ua/p/${data.slug}`;
 
           basePriceElement.textContent = `${data.rrc_price.toFixed()} грн`;
 
