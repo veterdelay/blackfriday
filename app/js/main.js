@@ -52,24 +52,34 @@ swipers.forEach((swiperElement, index) => {
       },
       spaceBetween: 16,
       breakpoints: {
-        448: {
+        320: {
           slidesPerView: 1,
         },
-        688: {
-          slidesPerView: 3,
+        370: {
+          slidesPerView: 2,
         },
         952: {
-          slidesPerView: 4,
+          slidesPerView: 3,
         },
         1000: {
-          slidesPerView: 5,
+          slidesPerView: 4,
         },
       },
+      on: {
+        init: function () {
+          onResize();
+        },
+        resize: function () {
+          onResize();
+        },
+      }
     });
   } else {
     console.error("Навигационные кнопки не найдены для Swiper:", swiperElement);
   }
 });
+
+
 
 //get && set products data
 

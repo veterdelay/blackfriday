@@ -48,13 +48,15 @@
 
 html{
     overflow: hidden;
+    background-color:#010302;
 }
 
 body{
     margin:0px;
     -webkit-font-smoothing: auto;
     font-family: CeraRoundPro,Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
-    background-color:#010302;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 img{
